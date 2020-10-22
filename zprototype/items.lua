@@ -1,0 +1,1 @@
+SIEXIT.sciencePackName = SIGen.NewTool( SIEXIT.sciencePackName , 200 ).SetHealth( 1 , SIFlags.sciencePack.key , SIFlags.sciencePack.value ).GetCurrentEntityName()

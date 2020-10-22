@@ -1,0 +1,15 @@
+local source = SIPackers.EnergySource( SITypes.energy.electric )
+
+SIEXIT.labMk2Name = SIGen.NewLab( SIEXIT.labMk2Name )
+.SetProperties( 5 , 5 , 600 , 2 , "320KW" , source )
+.SetModuleData( 3 , { 0 , 0.9 } )
+.SetCorpse( "lab-remnants" , "lab-explosion" )
+.GetCurrentEntityName()
+SIEXIT.labMk2ItemName = SIGen.GetCurrentEntityItemName()
+
+SIEXIT.labMk3Name = SIGen.NewLab( SIEXIT.labMk3Name )
+.SetProperties( 7 , 7 , 1500 , 3 , "2MW" , source )
+.SetModuleData( 4 , { 0 , 0.9 } )
+.SetCorpse( "lab-remnants" , "lab-explosion" )
+.GetCurrentEntityName()
+SIEXIT.labMk3ItemName = SIGen.GetCurrentEntityItemName()
