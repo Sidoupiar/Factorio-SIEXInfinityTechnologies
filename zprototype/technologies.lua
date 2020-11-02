@@ -48,7 +48,7 @@ table.insert( baseTechnologyPack , SIEXIT.sciencePackName )
 SIGen
 
 -- 添加统一图标
-.InsertIcon( 1 , SIEXIT.picturePath.."technology/infinity.png" )
+.Inserter.InsertIcon( 1 , SIEXIT.picturePath.."technology/infinity.png" )
 
 -- 普通机械臂搬运数量
 .NewTechnology( "inserter-size-bonus-1" )
@@ -178,4 +178,4 @@ SIEXIT.changedTechnology[
 ] = "artillery-shell-range-1"
 
 -- 清空统一图标缓存
-SIGen.ClearInsert()
+SIGen.FinishData().Inserter.Clear()
