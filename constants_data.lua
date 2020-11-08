@@ -10,5 +10,6 @@ return
 	labMk2Name = "lab-mk2" ,
 	labMk3Name = "lab-mk3" ,
 	
+	packTechnology = {} ,
 	changedTechnology = {}
 }

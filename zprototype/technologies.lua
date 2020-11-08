@@ -45,66 +45,72 @@ SIEXIT.sciencePackTechnology = SIGen.NewTechnology( SIEXIT.sciencePackName )
 baseTechnologyPack = table.deepcopy( baseTechnologyPack )
 table.insert( baseTechnologyPack , SIEXIT.sciencePackName )
 
-SIGen
-
 -- 添加统一图标
-.Inserter.InsertIcon( 1 , SIEXIT.picturePath.."technology/infinity.png" )
+SIGen.Inserter.InsertIcon( 1 , SIEXIT.picturePath.."technology/infinity.png" )
 
 -- 普通机械臂搬运数量
-.NewTechnology( "inserter-size-bonus-1" )
+table.insert( SIEXIT.packTechnology , SIGen.NewTechnology( "inserter-size-bonus-1" )
 .SetLevel( 1 , "infinite" )
 .SetTechnologies{ SIEXIT.sciencePackTechnology , "inserter-capacity-bonus-7" }
 .SetCosts( baseTechnologyPack , "3^(L-1)*1000" )
 .AddResults( SITypes.modifier.inserterStackSizeBonus , 1 )
+.GetCurrentEntityName() )
 
 -- 集装箱机械臂搬运数量
-.NewTechnology( "inserter-capacity-bonus-1" )
+table.insert( SIEXIT.packTechnology , SIGen.NewTechnology( "inserter-capacity-bonus-1" )
 .SetLevel( 1 , "infinite" )
 .SetTechnologies{ SIEXIT.sciencePackTechnology , "inserter-capacity-bonus-7" }
 .SetCosts( baseTechnologyPack , "2^(L-1)*1000" )
 .AddResults( SITypes.modifier.stackInserterCapacityBonus , 2 )
+.GetCurrentEntityName() )
 
 -- 列车制动力
-.NewTechnology( "braking-force-1" )
+table.insert( SIEXIT.packTechnology , SIGen.NewTechnology( "braking-force-1" )
 .SetLevel( 1 , "infinite" )
 .SetTechnologies{ SIEXIT.sciencePackTechnology , "braking-force-7" }
 .SetCosts( baseTechnologyPack , "2^(L-1)*500" )
 .AddResults( SITypes.modifier.trainBrakingForceBonus , 0.12 )
+.GetCurrentEntityName() )
 
 -- 无人机器人搬运数量
-.NewTechnology( "worker-robots-storage-1" )
+table.insert( SIEXIT.packTechnology , SIGen.NewTechnology( "worker-robots-storage-1" )
 .SetLevel( 1 , "infinite" )
 .SetTechnologies{ SIEXIT.sciencePackTechnology , "worker-robots-storage-3" }
 .SetCosts( baseTechnologyPack , "2^(L-1)*500" )
 .AddResults( SITypes.modifier.workerRobotStorage , 1 )
+.GetCurrentEntityName() )
 
 -- 无人机器人移动速度
-.NewTechnology( "worker-robots-speed-1" )
+table.insert( SIEXIT.packTechnology , SIGen.NewTechnology( "worker-robots-speed-1" )
 .SetLevel( 1 , "infinite" )
 .SetTechnologies{ SIEXIT.sciencePackTechnology , "worker-robots-speed-5" }
 .SetCosts( baseTechnologyPack , "2^(L-1)*1000" )
 .AddResults( SITypes.modifier.workerRobotSpeed , 0.55 )
+.GetCurrentEntityName() )
 
 -- 研究速度
-.NewTechnology( "research-speed-1" )
+table.insert( SIEXIT.packTechnology , SIGen.NewTechnology( "research-speed-1" )
 .SetLevel( 1 , "infinite" )
 .SetTechnologies{ SIEXIT.sciencePackTechnology , "research-speed-6" }
 .SetCosts( baseTechnologyPack , "2^(L-1)*500" )
 .AddResults( SITypes.modifier.laboratorySpeed , 0.5 )
+.GetCurrentEntityName() )
 
 -- 研究产能
-.NewTechnology( "research-productivity-1" )
+table.insert( SIEXIT.packTechnology , SIGen.NewTechnology( "research-productivity-1" )
 .SetLevel( 1 , "infinite" )
 .SetTechnologies{ SIEXIT.sciencePackTechnology , "research-speed-6" }
 .SetCosts( baseTechnologyPack , "2^(L-1)*500" )
 .AddResults( SITypes.modifier.laboratoryProductivity , 0.1 )
+.GetCurrentEntityName() )
 
 -- 采矿产能
-.NewTechnology( "mining-productivity-1" )
+table.insert( SIEXIT.packTechnology , SIGen.NewTechnology( "mining-productivity-1" )
 .SetLevel( 1 , "infinite" )
 .SetTechnologies{ SIEXIT.sciencePackTechnology , "mining-productivity-3" }
 .SetCosts( baseTechnologyPack , "L*3000" )
 .AddResults( SITypes.modifier.miningDrillProductivityBonus , 0.1 )
+.GetCurrentEntityName() )
 
 -- ------------------------------------------------------------------------------------------------
 -- ---------- 军事科技 ----------------------------------------------------------------------------

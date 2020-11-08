@@ -32,12 +32,15 @@ keyList = { "effects" }
 for k , v in pairs( SIEXIT.changedTechnology ) do
 	local vanillaTechnology = SIGen.GetData( SITypes.technology , v )
 	local selfTechnology = SIGen.GetData( SITypes.technology , k )
+	table.insert( SIEXIT.packTechnology , k )
 	for j , x in pairs( keyList ) do selfTechnology[x] = vanillaTechnology[x] end
 	
-	-- 添加前置科技
 	local prerequisites = table.deepcopy( vanillaTechnology.prerequisites )
 	for j , x in pairs( prerequisites ) do if x ~= "space-science-pack" then table.insert( selfTechnology.prerequisites , x ) break end end
-	
+end
+
+for i , v in pairs( SIEXIT.packTechnology ) do
+	local selfTechnology = SIGen.GetData( SITypes.technology , v )
 	-- 把被意外移除的研究瓶再加回来
 	local hasPack = false
 	for j , x in pairs( selfTechnology.unit.ingredients ) do
