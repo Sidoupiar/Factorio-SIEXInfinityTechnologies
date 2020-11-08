@@ -34,6 +34,7 @@ for k , v in pairs( SIEXIT.changedTechnology ) do
 	local selfTechnology = SIGen.GetData( SITypes.technology , k )
 	for j , x in pairs( keyList ) do selfTechnology[x] = vanillaTechnology[x] end
 	
+	-- 添加前置科技
 	local prerequisites = table.deepcopy( vanillaTechnology.prerequisites )
 	for j , x in pairs( prerequisites ) do if x ~= "space-science-pack" then table.insert( selfTechnology.prerequisites , x ) break end end
 	
