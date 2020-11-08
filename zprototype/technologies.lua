@@ -117,6 +117,7 @@ table.insert( baseTechnologyPack , "military-science-pack" )
 SIEXIT.changedTechnology[
 	SIGen.NewTechnology( "stronger-explosives-1" )
 	.SetLevel( 1 , "infinite" )
+	.SetTechnologies{ SIEXIT.sciencePackTechnology }
 	.SetCosts( baseTechnologyPack , "2^(L-1)*1000" )
 	.GetCurrentEntityName()
 ] = "stronger-explosives-7"
@@ -125,6 +126,7 @@ SIEXIT.changedTechnology[
 SIEXIT.changedTechnology[
 	SIGen.NewTechnology( "refined-flammables-1" )
 	.SetLevel( 1 , "infinite" )
+	.SetTechnologies{ SIEXIT.sciencePackTechnology }
 	.SetCosts( baseTechnologyPack , "2^(L-1)*1000" )
 	.GetCurrentEntityName()
 ] = "refined-flammables-7"
@@ -133,6 +135,7 @@ SIEXIT.changedTechnology[
 SIEXIT.changedTechnology[
 	SIGen.NewTechnology( "physical-projectile-damage-1" )
 	.SetLevel( 1 , "infinite" )
+	.SetTechnologies{ SIEXIT.sciencePackTechnology }
 	.SetCosts( baseTechnologyPack , "2^(L-1)*1000" )
 	.GetCurrentEntityName()
 ] = "physical-projectile-damage-7"
@@ -141,6 +144,7 @@ SIEXIT.changedTechnology[
 SIEXIT.changedTechnology[
 	SIGen.NewTechnology( "energy-weapons-damage-1" )
 	.SetLevel( 1 , "infinite" )
+	.SetTechnologies{ SIEXIT.sciencePackTechnology }
 	.SetCosts( baseTechnologyPack , "2^(L-1)*1000" )
 	.GetCurrentEntityName()
 ] = "energy-weapons-damage-7"
@@ -149,6 +153,7 @@ SIEXIT.changedTechnology[
 SIEXIT.changedTechnology[
 	SIGen.NewTechnology( "weapon-shooting-speed-1" )
 	.SetLevel( 1 , "infinite" )
+	.SetTechnologies{ SIEXIT.sciencePackTechnology }
 	.SetCosts( baseTechnologyPack , "2^(L-1)*1000" )
 	.GetCurrentEntityName()
 ] = "weapon-shooting-speed-6"
@@ -157,6 +162,7 @@ SIEXIT.changedTechnology[
 SIEXIT.changedTechnology[
 	SIGen.NewTechnology( "laser-turret-speed-1" )
 	.SetLevel( 1 , "infinite" )
+	.SetTechnologies{ SIEXIT.sciencePackTechnology }
 	.SetCosts( baseTechnologyPack , "2^(L-1)*1000" )
 	.GetCurrentEntityName()
 ] = "laser-turret-speed-7"
@@ -165,6 +171,7 @@ SIEXIT.changedTechnology[
 SIEXIT.changedTechnology[
 	SIGen.NewTechnology( "artillery-shell-speed-1" )
 	.SetLevel( 1 , "infinite" )
+	.SetTechnologies{ SIEXIT.sciencePackTechnology }
 	.SetCosts( baseTechnologyPack , "3^(L-1)*1000" )
 	.GetCurrentEntityName()
 ] = "artillery-shell-speed-1"
@@ -173,6 +180,7 @@ SIEXIT.changedTechnology[
 SIEXIT.changedTechnology[
 	SIGen.NewTechnology( "artillery-shell-range-1" )
 	.SetLevel( 1 , "infinite" )
+	.SetTechnologies{ SIEXIT.sciencePackTechnology }
 	.SetCosts( baseTechnologyPack , "2^(L-1)*1000" )
 	.GetCurrentEntityName()
 ] = "artillery-shell-range-1"

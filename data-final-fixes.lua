@@ -28,13 +28,22 @@ for i , v in pairs( keyList ) do infinityPack[v] = vanillaSpacePack[v] end
 -- ------ 调整研究项目数据 ------------------------------------------------------------------------
 -- ------------------------------------------------------------------------------------------------
 
-keyList = { "prerequisites" , "effects" }
+keyList = { "effects" }
 for k , v in pairs( SIEXIT.changedTechnology ) do
 	local vanillaTechnology = SIGen.GetData( SITypes.technology , v )
 	local selfTechnology = SIGen.GetData( SITypes.technology , k )
 	for j , x in pairs( keyList ) do selfTechnology[x] = vanillaTechnology[x] end
 	
-	selfTechnology.prerequisites = table.deepcopy( selfTechnology.prerequisites )
-	for j , x in pairs( selfTechnology.prerequisites ) do if x == "space-science-pack" then table.remove( selfTechnology.prerequisites , j ) break end end
-	table.insert( selfTechnology.prerequisites , SIEXIT.sciencePackTechnology )
+	local prerequisites = table.deepcopy( vanillaTechnology.prerequisites )
+	for j , x in pairs( prerequisites ) do if x ~= "space-science-pack" then table.insert( selfTechnology.prerequisites , x ) break end end
+	
+	-- 把被意外移除的研究瓶再加回来
+	local hasPack = false
+	for j , x in pairs( selfTechnology.unit.ingredients ) do
+		if x[1] == SIEXIT.sciencePackName then
+			hasPack = true
+			break
+		end
+	end
+	if not hasPack then table.insert( selfTechnology.unit.ingredients , SIPackers.SingleIngredientUnit( SIEXIT.sciencePackName ) ) end
 end
