@@ -9,9 +9,6 @@ SIGen
 .NewGroup( "extensions" )
 .NewSubGroup( "infinity-science" )
 
-need( "zprototype/items" )
-need( "zprototype/entities" )
-need( "zprototype/recipes" )
-need( "zprototype/technologies" )
+needlist( "zprototype" , "items" , "entities" , "recipes" , "technologies" )
 
 SIGen.Finish()
