@@ -1,4 +1,4 @@
-# SIEXInfinityTechnologies_0.0.1
+# SIEXInfinityTechnologies
 这个其实是最初用来试水的 MOD。
 
 现在它有了具体的功能：
