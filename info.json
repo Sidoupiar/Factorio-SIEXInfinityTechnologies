@@ -1,10 +1,10 @@
 {
 	"name" : "SIEXInfinityTechnologies" ,
-	"version" : "0.0.2" ,
+	"version" : "0.0.3" ,
 	"factorio_version" : "1.0" ,
 	"title" : "SI EX Infinity Technologies" ,
 	"author" : "Sidoupiar" ,
 	"homepage" : "http://www.sidoupiar.com" ,
 	"description" : "Adds a set of infinity technologies like vanilla game" ,
-	"dependencies" : [ "SICoreFunctionLibrary >= 0.2.6" , "? Krastorio2" ]
+	"dependencies" : [ "SICoreFunctionLibrary >= 0.2.7" , "? Krastorio2" ]
 }
