@@ -166,12 +166,12 @@ SIEXIT.changedTechnology[
 
 -- 激光武器射速
 SIEXIT.changedTechnology[
-	SIGen.NewTechnology( "laser-turret-speed-1" )
+	SIGen.NewTechnology( "energy-weapons-speed-1" )
 	.SetLevel( 1 , "infinite" )
 	.SetTechnologies{ SIEXIT.sciencePackTechnology }
 	.SetCosts( baseTechnologyPack , "2^(L-1)*1000" )
 	.GetCurrentEntityName()
-] = "laser-turret-speed-7"
+] = "energy-weapons-speed-7"
 
 -- 重型武器射速
 SIEXIT.changedTechnology[
